@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Shortener</title>
+    
+    <!-- AJAX -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+	<!-- BOOTSTRAP -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- MY SCRIPT -->
+    <script src="{{ url_for('static', filename='js/form.js') }}"></script>
+
+    <!-- MY CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head>
+<body>
+
+
+<div class="container mx-auto">
+    
+    <div>
+    
+        <form>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Paste a link to shorten it" aria-label="Recipient's username" aria-describedby="button-addon2" id="link_to_shorten" required autofocus>
+            <div class="input-group-append">
+                <button class="btn btn-outline-primary" type="submit">Shorten</button>
+            </div>
+        </div>
+        </form>
+        <div id="link">
+            <h3><b>Your link: </b><a href="" name="link"></a></h3>
+        </div>
+        
+    </div>
+
+    
+    
+    
+
+    
+
+
+    <!-- FOOTER -->
+    <blockquote class="blockquote text-center fixed-bottom">
+        <p class="mb-0">To be really happy and really safe, one ought to have at least two or three hobbies, and URL shortener.</p>
+        <footer class="blockquote-footer">Winston Churchill</footer>
+    </blockquote>
+
+
+
+    <!-- ALLERTS -->
+    <div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
+    <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+
+</div>
+
+
+</body>
+</html>
